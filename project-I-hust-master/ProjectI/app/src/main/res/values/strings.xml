@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VIT Chatting Room</string>
+    <string name="avatar"></string>
+    <string name="default_notification_channel_id">VIT Chatting Room</string>
+    <string name="default_notification_channel_title">VIT Chatting Room</string>
+    <string name="content_text">Welcome to VIT Chatting Room</string>
+    <string name="logging_in_notification"> Logged in</string>
+    <string name="logging_out_notification"> Logged out</string>
+    <string name="tapping">Tap to enter the room</string>
+
+</resources>

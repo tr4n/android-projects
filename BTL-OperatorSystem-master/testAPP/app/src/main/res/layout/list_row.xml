@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/lr_cbCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lr_ivFileIcon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false" />
+
+    <ImageView
+        android:id="@+id/lr_ivFileIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lr_cbCheck"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/lr_tvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lr_ivFileIcon"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lr_tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lr_tvFileName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lr_ivFileIcon"
+        android:text="TextView"
+        android:focusable="false"
+        android:clickable="false" />
+
+</RelativeLayout>

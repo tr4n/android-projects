@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundcould"
+    android:weightSum="20"
+    tools:context="com.tr4n.superstar2018.Settings">
+
+
+
+    <LinearLayout
+        android:id="@+id/LayoutContainHeading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/layoutcontaincharacter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/ImageViewSettings"
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/settingsfont" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LayoutContainMainBoxs"
+        android:orientation="vertical"
+        android:layout_weight="13"
+        android:background="@drawable/boxwoodbambo"
+        android:layout_width="match_parent"
+        android:weightSum="20"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1.5"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:id="@+id/LayoutContainMainSettings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="17"
+            android:background="@null"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/LayoutContainEdgeLeftMainSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/LayoutContainLeftMainSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainDataSettings1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageViewBoxCharacter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/boxcharacter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainPartitionDataSettings12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainDataSettings2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageViewBoxCoins"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/boxcoins" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainPartitionDataSettings23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainDataSettings3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageViewBoxThemes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/boxthemes" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutContainRightMainSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/boxwoodtwo"
+                    android:orientation="horizontal"
+                    android:weightSum="20">
+
+
+                    <LinearLayout
+                        android:id="@+id/LayoutcontainControlleft1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlLeft1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/controlleft" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="12.5"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlUp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlUp1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/controlup" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainMainBox1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewBox1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/characterstar" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlDown1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlDown1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/controldown" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LayoutContainControlRight1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlRight1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/controlright" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainPartitionBox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/boxwoodtwo"
+                    android:orientation="horizontal"
+                    android:weightSum="20">
+
+
+                    <LinearLayout
+                        android:id="@+id/LayoutcontainControlleft2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlLeft2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="12.5"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlUp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlUp2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@null" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainMainBox2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewBox2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:src="@drawable/numberoneblue" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlDown2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlDown2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@null" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LayoutContainControlRight2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlRight2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@null" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainPartitionBox23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" />
+
+
+                <LinearLayout
+                    android:id="@+id/LayoutContainBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/boxwoodtwo"
+                    android:orientation="horizontal"
+                    android:weightSum="20">
+
+
+                    <LinearLayout
+                        android:id="@+id/LayoutcontainControlleft3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlLeft3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@null" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="12.5"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlUp3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlUp3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@null" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainMainBox3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewBox3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/numberonegreen" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/LayoutContainControlDown3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ImageViewControlDown3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@null" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LayoutContainControlRight3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:background="@null"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ImageViewControlRight3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@null" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutContainEdgeRightMainSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.95"
+                android:background="@null"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LayoutContainFooter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.5"
+        android:background="@null"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <LinearLayout
+            android:id="@+id/LayoutContainSound"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/ImageViewSound"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/soundgreen" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LayoutContainSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/ImageViewSave"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/saveblack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayoutContainMusic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ImageViewMusic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/musicgreen" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

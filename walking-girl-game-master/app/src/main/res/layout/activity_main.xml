@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.tr4n.moving.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="#ff0"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/mainbroad"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:background="#55d8df"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@null"
+                android:src="@android:drawable/btn_star_big_on" />
+
+            <ImageButton
+                android:id="@+id/Object"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@null"
+                android:src="@drawable/girldowna" />
+
+            <ImageButton
+                android:id="@+id/Pokemon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/aa" />
+
+            <ImageButton
+                android:id="@+id/Pokemon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/bu" />
+
+            <ImageButton
+                android:id="@+id/Pokemon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/bv" />
+
+            <ImageButton
+                android:id="@+id/Pokemon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/fj" />
+
+            <ImageButton
+                android:id="@+id/Pokemon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/hn" />
+
+            <ImageButton
+                android:id="@+id/Pokemon6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/jj" />
+
+            <ImageButton
+                android:id="@+id/Pokemon7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/ju" />
+
+            <ImageButton
+                android:id="@+id/Pokemon8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/qo" />
+
+            <ImageButton
+                android:id="@+id/Pokemon9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:src="@drawable/le" />
+
+            <ImageButton
+                android:id="@+id/Pokemon10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/ln" />
+
+            <ImageButton
+                android:id="@+id/Pokemon11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/mh" />
+
+            <ImageButton
+                android:id="@+id/Pokemon12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/pl" />
+
+            <ImageButton
+                android:id="@+id/Pokemon13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/so" />
+
+            <ImageButton
+                android:id="@+id/Pokemon14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:src="@drawable/qm" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#ff0"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/rightDelimiter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#197a84"
+                android:text=" "></TextView>
+
+            <LinearLayout
+                android:id="@+id/rightBroad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="#a7871f"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:orientation="vertical"
+                    android:weightSum="9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:weightSum="2"
+                        android:background="#a5e6ba"
+                        android:orientation="vertical">
+
+
+                        <ImageButton
+                            android:id="@+id/viewImagePokemon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:src="@null" />
+
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied9"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied10"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied11"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied12"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied13"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied14"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:src="@null" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffff"
+                    android:orientation="vertical"
+                    android:weightSum="9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="#a5e6ba"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/txtvDistancePokemon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textColor="#ff00"
+
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/txtvValuePokemon"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text=""
+                            android:textColor="#ff00"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+                    <ImageButton
+                        android:id="@+id/PokemonDied7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+
+                        android:background="@null"
+                        android:src="@null" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ff00"
+        android:orientation="vertical"
+        android:weightSum="20">
+
+        <TextView
+            android:id="@+id/bottomDelimiter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000dff" />
+
+        <LinearLayout
+            android:id="@+id/underBroad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="19"
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/totalDistance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Total Distance: 0 km"
+                        android:textColor="#ff00"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/TMP"
+                        android:layout_width="0dp"
+                        android:textColor="#ff00"
+                        android:textStyle="italic"
+                        android:text="Money: 0 $"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/HealthyPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:background="#f700ff" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCATCH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Catch"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
