@@ -13,12 +13,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.expensemanagement.R;
-import com.example.expensemanagement.adapters.IncomingAdapter;
-import com.example.expensemanagement.adapters.OutgoingAdapter;
+import com.example.expensemanagement.adapters.ExpenseAdapter;
 import com.example.expensemanagement.collections.Collect;
 import com.example.expensemanagement.databases.RealmHandle;
 import com.example.expensemanagement.models.ExpenseModel;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +58,7 @@ public class StatisticActivity extends AppCompatActivity {
         setContentView(R.layout.activity_statistic);
         ButterKnife.bind(this);
 
+
         expenseModelList = RealmHandle.getInstance().expenseModelList();
 
         for (ExpenseModel expenseModel : expenseModelList) {
@@ -73,9 +74,26 @@ public class StatisticActivity extends AppCompatActivity {
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
-        Log.d(TAG, "onCreate: " + outgoingList);
+        seeTotal();
 
 
+    }
+
+    private void seeTotal(){
+        recyclerView.setVisibility(View.GONE);
+        llSurplus.setVisibility(View.VISIBLE);
+        BigInteger totalIncomings = BigInteger.ZERO, totalOutgoings = BigInteger.ZERO;
+        for (ExpenseModel expenseModel : expenseModelList) {
+            BigInteger temp = new BigInteger(expenseModel.getMoney());
+            if (expenseModel.getType() == Collect.INCOMING) {
+                totalIncomings = totalIncomings.add(temp);
+            } else {
+                totalOutgoings =  totalOutgoings.add(temp);
+            }
+        }
+        tvTotalIncomings.setText("Tổng số khoản thu: " + Collect.getFormatNumber(totalIncomings) + " vnd");
+        tvTotalOutgoings.setText("Tổng số khoản chi: " +  Collect.getFormatNumber(totalOutgoings) + " vnd");
+        tvSurplus.setText("Khoản dư: " +  Collect.getFormatNumber(totalIncomings.subtract(totalOutgoings)) + " vnd");
     }
 
     @OnClick({R.id.bt_incommings, R.id.bt_outgoings, R.id.bt_total,R.id.bt_delete})
@@ -84,35 +102,22 @@ public class StatisticActivity extends AppCompatActivity {
             case R.id.bt_incommings:
                 recyclerView.setVisibility(View.VISIBLE);
                 llSurplus.setVisibility(View.GONE);
-                recyclerView.setAdapter(new IncomingAdapter(incomingList, this));
+                recyclerView.setAdapter(new ExpenseAdapter(incomingList, this));
                 break;
             case R.id.bt_outgoings:
                 recyclerView.setVisibility(View.VISIBLE);
                 llSurplus.setVisibility(View.GONE);
 
-                recyclerView.setAdapter(new OutgoingAdapter(outgoingList, this));
+                recyclerView.setAdapter(new ExpenseAdapter(outgoingList, this));
                 break;
             case R.id.bt_total:
-                recyclerView.setVisibility(View.GONE);
-                llSurplus.setVisibility(View.VISIBLE);
-                int totalIncomings = 0, totalOutgoings = 0;
-                for (ExpenseModel expenseModel : expenseModelList) {
-                    if (expenseModel.getType() == Collect.INCOMING) {
-                        totalIncomings += expenseModel.getMoney();
-
-                    } else {
-                        totalOutgoings += expenseModel.getMoney();
-                    }
-                }
-                tvTotalIncomings.setText("Total Incomings: " + totalIncomings + " vnd");
-                tvTotalOutgoings.setText("Total Outgoings: " + totalOutgoings + " vnd");
-                tvSurplus.setText("Surplus: " + (totalIncomings - totalOutgoings) + " vnd");
+               seeTotal();
                 break;
             case R.id.bt_delete:
                 CountDownTimer countDownTimer =new CountDownTimer(200,100) {
                     @Override
                     public void onTick(long millisUntilFinished) {
-                        RealmHandle.getInstance().deleteAllData();
+                      RealmHandle.getInstance().deleteAllData();
                     }
 
                     @Override

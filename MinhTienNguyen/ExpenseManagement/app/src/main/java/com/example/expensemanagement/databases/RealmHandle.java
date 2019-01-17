@@ -7,6 +7,7 @@ import com.example.expensemanagement.models.ExpenseModel;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class RealmHandle {
     private static final String TAG = "RealmHandle";
@@ -23,18 +24,19 @@ public class RealmHandle {
         realm.beginTransaction();
         realm.copyToRealm(expenseModel);
         realm.commitTransaction();
-        Log.d(TAG, "addExpense: " + expenseModel);
+
     }
 
     public List<ExpenseModel> expenseModelList(){
         return realm.where(ExpenseModel.class).findAll();
     }
 
-    public void deleteAllData(){
+    public  void deleteAllData(){
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                realm.deleteAll();
+                RealmResults<ExpenseModel> result = realm.where(ExpenseModel.class).findAll();
+                result.deleteAllFromRealm();
             }
         });
     }

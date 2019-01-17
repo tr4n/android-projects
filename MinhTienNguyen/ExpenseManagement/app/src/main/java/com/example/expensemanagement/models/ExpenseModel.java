@@ -4,12 +4,19 @@ import io.realm.RealmObject;
 
 public class ExpenseModel  extends RealmObject{
     private String date;
-    private String type;
-    private int money;
+    private int type;
+    private String money;
     private String content;
 
     public ExpenseModel(){
 
+    }
+
+    public void get(String date, int type, String money, String content) {
+        this.date = date;
+        this.type = type;
+        this.money = money;
+        this.content = content;
     }
 
     public String getDate() {
@@ -20,19 +27,19 @@ public class ExpenseModel  extends RealmObject{
         this.date = date;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
-    public int getMoney() {
+    public String getMoney() {
         return money;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(String money) {
         this.money = money;
     }
 

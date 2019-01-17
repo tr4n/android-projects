@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="INCOMINGS"
+            android:text="KHOẢN THU"
             app:layout_constraintEnd_toStartOf="@+id/bt_total"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="SURPLUS"
+            android:text="TIỀN DƯ"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="OUTGOINGS"
+            android:text="KHOẢN CHI"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/bt_total"
             app:layout_constraintTop_toTopOf="parent" />
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:orientation="vertical"
-
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -101,7 +101,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:text="DELETA ALL" />
+                android:text="Xóa tất cả dữ liệu " />
 
         </LinearLayout>
 

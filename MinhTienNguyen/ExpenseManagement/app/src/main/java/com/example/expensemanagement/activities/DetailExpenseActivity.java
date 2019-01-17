@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.expensemanagement.R;
 import com.example.expensemanagement.collections.Collect;
 import com.example.expensemanagement.databases.RealmHandle;
 import com.example.expensemanagement.models.ExpenseModel;
-import com.example.expensemanagement.models.ExpenseTypePasser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +36,9 @@ public class DetailExpenseActivity extends AppCompatActivity {
     @BindView(R.id.bt_cancel)
     Button btCancel;
 
+    boolean condition = false;
+    int type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -47,31 +50,42 @@ public class DetailExpenseActivity extends AppCompatActivity {
     }
 
     private void Initialization() {
-        ExpenseTypePasser expenseTypePasser = (ExpenseTypePasser) getIntent().getSerializableExtra("type");
-        tvType.setText(expenseTypePasser.getType());
-        tvTime.setText(Collect.getTime("HH:mm - dd/MM/yy"));
+
+        type = getIntent().getIntExtra("type", 0);
+        tvType.setText(type == Collect.INCOMING ? "Thu" : "Chi");
+        tvTime.setText(Collect.getTime("HH:mm - dd/MM/yyyy"));
     }
 
     @OnClick({R.id.bt_save, R.id.bt_cancel})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_save:
-                 new CountDownTimer(200,100) {
+                condition = true;
+                new CountDownTimer(200, 100) {
                     @Override
                     public void onTick(long millisUntilFinished) {
-                        ExpenseModel expenseModel= new ExpenseModel();
-                        expenseModel.setDate(tvTime.getText().toString());
-                        expenseModel.setType(tvType.getText().toString());
-                        expenseModel.setContent(etContent.getText().toString());
-                        expenseModel.setMoney(Integer.parseInt(etMoney.getText().toString()));
+                        ExpenseModel expenseModel = new ExpenseModel();
+                        String time = tvTime.getText().toString().trim();
+                        String money = etMoney.getText().toString();
+                        String content = etContent.getText().toString();
+                        if (money.length() == 0 || content.length() == 0) {
+                            condition = false;
+                            return;
+                        }
+                        expenseModel.get(time, type, money, content);
                         RealmHandle.getInstance().addExpense(expenseModel);
-                        Log.d(TAG, "onTick: " + tvType.getText());
+
                     }
 
                     @Override
                     public void onFinish() {
-                        Intent intent = new Intent(DetailExpenseActivity.this, StatisticActivity.class);
-                        startActivity(intent);
+                        if (condition) {
+                            Intent intent = new Intent(DetailExpenseActivity.this, StatisticActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(DetailExpenseActivity.this, "Cần nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
+                        }
+
                     }
                 }.start();
 

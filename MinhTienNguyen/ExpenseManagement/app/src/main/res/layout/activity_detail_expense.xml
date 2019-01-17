@@ -14,15 +14,14 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:text="THÔNG TIN CHI TIẾT"
         android:textColor="#000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="EXPENSE DETAIL" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -30,14 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="Thời gian:"
         android:textAlignment="textEnd"
         android:textColor="#000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        tools:text="Time" />
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/tv_time"
@@ -46,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="time"
+        android:text="12h00 - 12/11/2019"
         android:textColor="#000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Type"
+        android:text="Thu/Chi:"
         android:textAlignment="textEnd"
         android:textColor="#000"
         android:textSize="18sp"
@@ -74,7 +72,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="incommings"
+        android:text="Thu"
         android:textColor="#000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Money"
+        android:text="Số tiền:"
         android:textAlignment="textEnd"
         android:textColor="#000"
         android:textSize="18sp"
@@ -115,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Content"
+        android:text="Nội dung: "
         android:textAlignment="textEnd"
         android:textColor="#000"
         android:textSize="18sp"
@@ -152,21 +150,23 @@
         android:id="@+id/bt_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
         android:text="SAVE"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_content" />
 
     <Button
         android:id="@+id/bt_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
         android:text="CANCEL"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_content" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"

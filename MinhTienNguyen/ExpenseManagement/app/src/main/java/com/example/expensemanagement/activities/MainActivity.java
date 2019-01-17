@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.example.expensemanagement.R;
 import com.example.expensemanagement.collections.Collect;
-import com.example.expensemanagement.models.ExpenseTypePasser;
+import com.example.expensemanagement.databases.RealmHandle;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Realm.init(getApplicationContext());
+        //Realm.deleteRealm(Realm.getDefaultConfiguration());
 
     }
 
@@ -38,17 +39,15 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.bt_incommings, R.id.bt_outgoings, R.id.bt_statictics})
     public void onViewClicked(View view) {
         Intent intentDetailExpense = new Intent(MainActivity.this, DetailExpenseActivity.class);
-        ExpenseTypePasser expenseTypePasser;
+
 
         switch (view.getId()) {
             case R.id.bt_incommings:
-               expenseTypePasser = new ExpenseTypePasser(Collect.INCOMING);
-               intentDetailExpense.putExtra("type", expenseTypePasser);
+               intentDetailExpense.putExtra("type", Collect.INCOMING);
                 startActivity(intentDetailExpense);
                 break;
             case R.id.bt_outgoings:
-                expenseTypePasser = new ExpenseTypePasser(Collect.OUTGOING);
-                intentDetailExpense.putExtra("type", expenseTypePasser);
+                intentDetailExpense.putExtra("type", Collect.OUTGOING);
                 startActivity(intentDetailExpense);
                 break;
             case R.id.bt_statictics:
