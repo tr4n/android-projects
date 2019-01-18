@@ -6,7 +6,6 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -25,7 +24,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import io.realm.Realm;
 
 public class StatisticActivity extends AppCompatActivity {
     @BindView(R.id.bt_incommings)
@@ -46,6 +44,8 @@ public class StatisticActivity extends AppCompatActivity {
     LinearLayout llSurplus;
     @BindView(R.id.bt_delete)
     Button btDelete;
+    @BindView(R.id.bt_home)
+    Button btHome;
     private List<ExpenseModel> expenseModelList = new ArrayList<>();
     private List<ExpenseModel> incomingList = new ArrayList<>();
     private List<ExpenseModel> outgoingList = new ArrayList<>();
@@ -79,7 +79,7 @@ public class StatisticActivity extends AppCompatActivity {
 
     }
 
-    private void seeTotal(){
+    private void seeTotal() {
         recyclerView.setVisibility(View.GONE);
         llSurplus.setVisibility(View.VISIBLE);
         BigInteger totalIncomings = BigInteger.ZERO, totalOutgoings = BigInteger.ZERO;
@@ -88,15 +88,15 @@ public class StatisticActivity extends AppCompatActivity {
             if (expenseModel.getType() == Collect.INCOMING) {
                 totalIncomings = totalIncomings.add(temp);
             } else {
-                totalOutgoings =  totalOutgoings.add(temp);
+                totalOutgoings = totalOutgoings.add(temp);
             }
         }
         tvTotalIncomings.setText("Tổng số khoản thu: " + Collect.getFormatNumber(totalIncomings) + " vnd");
-        tvTotalOutgoings.setText("Tổng số khoản chi: " +  Collect.getFormatNumber(totalOutgoings) + " vnd");
-        tvSurplus.setText("Khoản dư: " +  Collect.getFormatNumber(totalIncomings.subtract(totalOutgoings)) + " vnd");
+        tvTotalOutgoings.setText("Tổng số khoản chi: " + Collect.getFormatNumber(totalOutgoings) + " vnd");
+        tvSurplus.setText("Khoản dư: " + Collect.getFormatNumber(totalIncomings.subtract(totalOutgoings)) + " vnd");
     }
 
-    @OnClick({R.id.bt_incommings, R.id.bt_outgoings, R.id.bt_total,R.id.bt_delete})
+    @OnClick({R.id.bt_incommings, R.id.bt_outgoings, R.id.bt_total, R.id.bt_delete})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_incommings:
@@ -111,13 +111,13 @@ public class StatisticActivity extends AppCompatActivity {
                 recyclerView.setAdapter(new ExpenseAdapter(outgoingList, this));
                 break;
             case R.id.bt_total:
-               seeTotal();
+                seeTotal();
                 break;
             case R.id.bt_delete:
-                CountDownTimer countDownTimer =new CountDownTimer(200,100) {
+                CountDownTimer countDownTimer = new CountDownTimer(200, 100) {
                     @Override
                     public void onTick(long millisUntilFinished) {
-                      RealmHandle.getInstance().deleteAllData();
+                        RealmHandle.getInstance().deleteAllData();
                     }
 
                     @Override
@@ -133,5 +133,8 @@ public class StatisticActivity extends AppCompatActivity {
     }
 
 
-
+    @OnClick(R.id.bt_home)
+    public void onViewClicked() {
+        startActivity(new Intent(StatisticActivity.this, MainActivity.class));
+    }
 }

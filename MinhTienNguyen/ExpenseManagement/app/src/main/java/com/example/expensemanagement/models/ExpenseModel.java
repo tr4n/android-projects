@@ -50,4 +50,8 @@ public class ExpenseModel  extends RealmObject{
     public void setContent(String content) {
         this.content = content;
     }
+
+    public boolean equals(ExpenseModel other){
+        return this.getDate().equals(other.getDate());
+    }
 }

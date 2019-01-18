@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Realm.init(getApplicationContext());
-        //Realm.deleteRealm(Realm.getDefaultConfiguration());
+     //   Realm.deleteRealm(Realm.getDefaultConfiguration());
 
     }
 

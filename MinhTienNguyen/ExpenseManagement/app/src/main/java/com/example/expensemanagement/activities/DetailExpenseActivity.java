@@ -61,33 +61,24 @@ public class DetailExpenseActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.bt_save:
                 condition = true;
-                new CountDownTimer(200, 100) {
-                    @Override
-                    public void onTick(long millisUntilFinished) {
-                        ExpenseModel expenseModel = new ExpenseModel();
-                        String time = tvTime.getText().toString().trim();
-                        String money = etMoney.getText().toString();
-                        String content = etContent.getText().toString();
-                        if (money.length() == 0 || content.length() == 0) {
-                            condition = false;
-                            return;
-                        }
-                        expenseModel.get(time, type, money, content);
-                        RealmHandle.getInstance().addExpense(expenseModel);
+                ExpenseModel expenseModel = new ExpenseModel();
+                String time = tvTime.getText().toString().trim();
+                String money = etMoney.getText().toString();
+                String content = etContent.getText().toString();
+                if (money.length() == 0 || content.length() == 0) {
+                    condition = false;
+                    return;
+                }
+                expenseModel.get(time, type, money, content);
+                RealmHandle.getInstance().addExpense(expenseModel);
+                if (condition) {
+                    Toast.makeText(DetailExpenseActivity.this, "Lưu thành công!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(DetailExpenseActivity.this, StatisticActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(DetailExpenseActivity.this, "Cần nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
+                }
 
-                    }
-
-                    @Override
-                    public void onFinish() {
-                        if (condition) {
-                            Intent intent = new Intent(DetailExpenseActivity.this, StatisticActivity.class);
-                            startActivity(intent);
-                        } else {
-                            Toast.makeText(DetailExpenseActivity.this, "Cần nhập đầy đủ thông tin!", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                }.start();
 
                 break;
             case R.id.bt_cancel:
